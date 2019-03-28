@@ -107,7 +107,9 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des discipline</a>
+      <a href="AddDiscipline.php">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -115,7 +117,9 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des athlètes</a>
+      <a href="AthleteForm.php">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
     </div>
   </div> 
 
@@ -124,17 +128,49 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des residence</a>
+      <a href="AddResidence.php">Ajouter Residence</a>
+      <a href="#">Modifier Information de residence</a>
+      <a href="#">Supprimer residence</a>
     </div>
   </div>
 <div class="dropdown">
-    <button class="dropbtn">Service
+    <button class="dropbtn">Services de transport
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Services de transport</a>
-      <a href="#">Service Medicaux</a>
-	    <a href="#">Employer</a>
+      <a href="AddEmployee.php">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Services Medicaux
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Employer
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="AddEmployee.php">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Installation Olympiques
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -142,7 +178,9 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des Pays</a>
+      <a href="AddCountry.php">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
     </div>
     <div class="dropdown-content">
     </div>
@@ -152,17 +190,18 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Liste des officiel</a>
+      <a href="AddOfficielForm.php">Ajouter</a>
+      <a href="#">Modifier</a>
+      <a href="#">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
-    <button class="dropbtn">Connection Administrateur
+    <button class="dropbtn">Deconnexion
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="HomePage.php">Connection administrateur</a>
+      <a href="olympic_navbar.php">Deconnexion</a>
     </div>
-</div>
 </div>
   </div>
   <div class="bottomleft">
@@ -187,8 +226,6 @@ body {
     <img src="olympic_game.jpg" alt="Olympic logo" class="center" style="margin-top: 20px;width: 500px;
     height: 400px;"> 
   </div>
-
-
 
 </body>
 </html>
