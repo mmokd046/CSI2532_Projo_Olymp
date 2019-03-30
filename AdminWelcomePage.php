@@ -140,7 +140,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="AddEmployee.php">Ajouter</a>
+      <a href="AddServiceTransport.php">Ajouter</a>
       <a href="#">Modifier</a>
       <a href="#">Supprimer</a>
     </div>
@@ -150,7 +150,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Ajouter</a>
+      <a href="AddServiceMedicaux.php">Ajouter</a>
       <a href="#">Modifier</a>
       <a href="#">Supprimer</a>
     </div>
@@ -170,7 +170,7 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Ajouter</a>
+      <a href="AddInstallationOlymp.php">Ajouter</a>
       <a href="#">Modifier</a>
       <a href="#">Supprimer</a>
     </div>
