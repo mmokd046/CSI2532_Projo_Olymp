@@ -20,20 +20,21 @@
     margin: auto;">
 
 <div class="container">
-  <h2>Listes des pays</h2>
+  <h2>Listes des Athletes</h2>
   <ul class="list-group">
 	  	<?php
 			include_once 'index.php';
 			$query = "SELECT * FROM 
-			pays;";
+			personne P, athletes A 
+			WHERE P.id = A.athlete_id ;";
 			$stm = $dbh->prepare($query);
 			$stm->execute();
 			$result = $stm->fetchAll();
 			foreach($result as $val){
-				echo '<form action="UpdateCountryForm.php" id="form-id" method="POST">';	
-				echo '<input type="hidden" name="pays_id" value="'.$val['id'].'"/>';
+				echo '<form action="DeleteAthleteController.php" id="form-id" method="POST">';	
+				echo '<input type="hidden" name="personne_id" value="'.$val['id'].'"/>';
 				echo '<div style="float: left">';
-			 	echo '<li class="list-group-item" style = "width:300" class="athlete" value="'.$val['id'].'"> '.$val['nom_pays'].'</li></div> <div style="float: left"><button type="submit" style="height:50">modifier nom de pays</button></div> ';
+			 	echo '<li class="list-group-item" style = "width:300" class="athlete" value="'.$val['id'].'"> '.$val['prenom'].'</li></div> <div style="float: left"><button type="submit" style="height:50">supprimer athlete</button></div> ';
 			 	echo '</form>';
 
 			}

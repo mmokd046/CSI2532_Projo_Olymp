@@ -110,8 +110,8 @@ body {
       <a href="AddDiscipline.php">Ajouter</a>
       <a href="DisciplineList.php">Modifier discipline</a>
       <a href="EpreuveList.php">Modifier epreuve</a>
-      <a href="#">Supprimer Discipline</a>
-      <a href="#">Supprimer Epreuves</a>
+      <a href="DeleteDiscipline.php">Supprimer Discipline</a>
+      <a href="DeleteEpreuves.php">Supprimer Epreuves</a>
     </div>
 </div>
 <div class="dropdown">
@@ -121,7 +121,7 @@ body {
     <div class="dropdown-content">
       <a href="AthleteForm.php">Ajouter</a>
       <a href="UpdateAthlete.php">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="DeleteAthlete.php">Supprimer</a>
     </div>
   </div> 
 
@@ -132,7 +132,7 @@ body {
     <div class="dropdown-content">
       <a href="AddResidence.php">Ajouter Residence</a>
       <a href="ResidenceList.php">Modifier Information de residence</a>
-      <a href="#">Supprimer residence</a>
+      <a href="DeleteResidence.php">Supprimer residence</a>
     </div>
   </div>
 <div class="dropdown">
@@ -141,8 +141,8 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddServiceTransport.php">Ajouter</a>
-      <a href="#">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="ServiceTransportList.php">Modifier</a>
+      <a href="DeleteServiceTransport.php">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -151,8 +151,8 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddServiceMedicaux.php">Ajouter</a>
-      <a href="#">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="ServiceMedicauxList.php">Modifier</a>
+      <a href="DeleteServiceMedicauxForm.php">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -162,7 +162,7 @@ body {
     <div class="dropdown-content">
       <a href="AddEmployee.php">Ajouter</a>
       <a href="EmployeeList.php">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="DeleteEmployee.php">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -182,7 +182,7 @@ body {
     <div class="dropdown-content">
       <a href="AddCountry.php">Ajouter</a>
       <a href="CountryList.php">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="DeletePays.php">Supprimer</a>
     </div>
     <div class="dropdown-content">
     </div>
@@ -194,7 +194,7 @@ body {
     <div class="dropdown-content">
       <a href="AddOfficielForm.php">Ajouter</a>
       <a href="OfficielList.php">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="DeleteOfficiel.php">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">

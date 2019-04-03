@@ -107,15 +107,17 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des discipline</a>
+      <a href="DisciplineListExternal.php">Voir les disciplines</a>
+      <a href="#">Chercher une discipline</a>
     </div>
-</div>
+  </div>
 <div class="dropdown">
     <button class="dropbtn">Athlètes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des athlètes</a>
+      <a href="AthletesListExternal.php">Voir les Athletes</a>
+      <a href="#">Chercher les athletes</a>
     </div>
   </div> 
 
@@ -124,17 +126,44 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des residence</a>
+      <a href="ResidenceListExternal.php">Listes des residence</a>
+      <a href="#">Chercher une residence</a>
     </div>
   </div>
 <div class="dropdown">
-    <button class="dropbtn">Service
+    <button class="dropbtn">Services de transport
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Services de transport</a>
-      <a href="#">Service Medicaux</a>
-	    <a href="#">Employer</a>
+      <a href="#">Liste des services de transport</a>
+      <a href="#">Chercher service de transport</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Services Medicaux
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Listes des services medicaux</a>
+      <a href="#">Chercher services medicaux</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Employer
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="EmployeeListExternal.php">Listes des employer</a>
+      <a href="#">Chercher employer</a>
+    </div>
+</div>
+<div class="dropdown">
+    <button class="dropbtn">Installation Olympiques
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Listes des installations olympiques</a>
+      <a href="#">Chercher installation olympiques</a>
     </div>
 </div>
 <div class="dropdown">
@@ -142,9 +171,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des Pays</a>
-    </div>
-    <div class="dropdown-content">
+      <a href="PaysListExternal.php">Listes des pays</a>
+      <a href="#">Chercher pays</a>
     </div>
 </div>
 <div class="dropdown">
@@ -152,17 +180,17 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Liste des officiel</a>
+      <a href="OfficielListExternal.php">Listes des officiels</a>
+      <a href="#">Chercher officiel</a>
     </div>
 </div>
 <div class="dropdown">
-    <button class="dropbtn">Connection Administrateur
+    <button class="dropbtn">Connexion
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="HomePage.php">Connection administrateur</a>
+      <a href="HomePage.php">Se connecter en tant que adminstrateur</a>
     </div>
-</div>
 </div>
   </div>
   <div class="bottomleft">
@@ -187,8 +215,6 @@ body {
     <img src="olympic_game.jpg" alt="Olympic logo" class="center" style="margin-top: 20px;width: 500px;
     height: 400px;"> 
   </div>
-
-
 
 </body>
 </html>

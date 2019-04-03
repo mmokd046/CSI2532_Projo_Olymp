@@ -1,51 +1,40 @@
  
  $(document).ready(function(){
 
+      realuserName = document.getElementById("username").value;
+
+      realPassword = document.getElementById("password").value;
+
     	$("form").submit(function(e){
   			var emailValue = document.getElementById("email").value;
   			var passWordValue = document.getElementById("password").value;
   			if (emailValue.length == 0) {
   				$("#emailDiv").removeAttr('hidden');
-  				$("#emailDiv").text('You have not entered an email');
+  				$("#emailDiv").text('Vous avez pas rentrer de username');
   				e.preventDefault(e);
   			} else {
   				$("#emailDiv").attr('hidden', true);
   			}
   			if (passWordValue.length == 0) {
   				$("#passwordDiv").removeAttr('hidden');
-  				$("#passwordDiv").text('You have not entered a password');
-  				e.preventDefault(e);
-  			} else if (passWordValue.length > 0 && passWordValue.length < 8) {
-  				$("#emailDiv").attr('hidden', true);
-  				$("#passwordDiv").removeAttr('hidden')
-  				$("#passwordDiv").text('The length of the password should be a minimum of 8 characters')
+  				$("#passwordDiv").text('Vous avez pas rentrer de mot de passe');
   				e.preventDefault(e);
   			} else {
-  				$("#emailDiv").attr('hidden', true);
-  				var hasNumber = false;
-  				var UpperCase = false;
-  				var i = 0;
-  				while(i < passWordValue.length) {
-  					if ('0123456789'.includes(passWordValue.charAt(i))) {
-  						console.log("Number found in the password")
-  						hasNumber = true
-  					}
-  					if (passWordValue.charAt(i) === passWordValue.charAt(i).toUpperCase()) {
-  						console.log("Upper case value found")
-  						UpperCase = true
-  					}
-  					if (UpperCase && hasNumber ) {
-  						break;
-  					}
-  					i++;
-  				}
-  				 console.log(UpperCase)
-  				 console.log(hasNumber)
-  				if (UpperCase == false || hasNumber == false ){
-					$("#passwordDiv").removeAttr('hidden');
-  					$("#passwordDiv").text('Password must contain at least one upper case and one number');
-  					e.preventDefault(e);
-  				}
+            $("#passwordDiv").attr('hidden', true);
+          } 
+          if (emailValue !=== realuserNamel) {
+            $("#emailDiv").removeAttr('hidden');
+            $("#emailDiv").text('Votre username est incorrect');
+    				$("#passwordDiv").attr(true);
+    				e.preventDefault(e);
+  			} else if (passWordValue !=== realPassword) {
+            $("#emailDiv").removeAttr('hidden');
+            $("#emailDiv").text('Votre mot de passe est incorrect');
+            $("#passwordDiv").attr(true);
+            e.preventDefault(e);
+        } else {
+    				$("#emailDiv").attr('hidden', true);
+            $("#passwordDiv").attr(true);
   			}   
         });
 });

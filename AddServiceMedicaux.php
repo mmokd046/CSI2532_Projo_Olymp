@@ -44,7 +44,7 @@
 			    		 <i class='far fa-address-card' aria-hidden='true'></i>
 			    	</span>
 			  </div>
-			  <input type="number" class="form-control" name="capacity"placeholder="Entrer la capacite du service medical " aria-describedby="basic-addon1" id="servicemedicalCapacity" min="30" max="500">
+			  <input type="text" class="form-control" name="address"placeholder="Entrer l'addresse du service medical " aria-describedby="basic-addon1" id="servicemedicalCapacity" min="30" max="500">
 			</div>
 			  <div class="alert alert-danger" role="alert" id="LastNameDiv" hidden>
   				<strong>Oh snap!</strong> Change a few things up and try submitting again.
@@ -56,13 +56,32 @@
 			    		 <i class='far fa-address-card' aria-hidden='true'></i>
 			    	</span>
 			  </div>
-			  <input type="text" class="form-control" placeholder="Entrer l'addresse" name="address" aria-describedby="basic-addon1" id="address">
+			  <input type="text" class="form-control" placeholder="Entrer phone number" name="phone_number" aria-describedby="basic-addon1" id="address">
 			</div>
 		    <div class="alert alert-danger" role="alert" id="emailDiv" hidden>
   				<strong>Oh snap!</strong> Change a few things up and try submitting again.
 			</div>
+
+			<div class="input-group mb-3" >
+	  			  <select style="width:540px;height:40px" id="discipline" name="discipline">
+	  			  	<option value="" disabled selected>Choisir discipline ...</option>
+			  	  	<?php
+							include_once 'index.php';
+							$query = "SELECT * FROM discipline;";
+							$stm = $dbh->prepare($query);
+							$stm->execute();
+							$result = $stm->fetchAll();
+							print "<pre>";
+							print_r($result);
+							print "</pre>";
+							foreach($result as $val){		
+							 	echo '<option value="'.$val['id'].'"> '.$val['discipline_name'].'</option> ';
+							}
+					?>
+				  </select>
+			</div>
 		<div class = "wrapper">
-  		<button style="margin-top: 20px;margin-left: 170" type="submit" class="btn btn-primary" class ="center">Creer le service</button>
+  		<button style="margin-top: 20px;margin-left: 170" type="submit" class="btn btn-primary" class ="center">Creer le service medical</button>
 	</div>
 	</div>
 	</form>	

@@ -18,8 +18,13 @@
     width: 500px;
     height: 400px;
     margin: auto;">
-		<form action="AddserviceMedicauxFormController.php" method="POST">
+		<form action="AddInstallationFormController.php" method="POST">
 			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    	<span class="input-group-text" id="basic-addon1">
+			    		 <i class='far fa-address-card' aria-hidden='true'></i>
+			    	</span>
+			  </div>
 			  <input type="text" class="form-control" placeholder="Entrer le nom de l'installation olympique" name ="nom" aria-describedby="basic-addon1" id="nom">
 			</div>
 		  	<div class="alert alert-danger" role="alert" id="emailDiv" hidden>
@@ -61,6 +66,31 @@
 		    <div class="alert alert-danger" role="alert" id="emailDiv" hidden>
   				<strong>Oh snap!</strong> Change a few things up and try submitting again.
 			</div>
+		<div class="input-group mb-3" >
+  			  <select style="width:540px;height:40px" id="discipline" name="usage">
+  			  	<option value="" disabled selected>Choisir l'utilisation de l'installation ...</option>
+  			  	<option value="1">Entrainement</option>
+  			  	<option value="2">Competition</option>
+			  </select>
+		</div>
+		<div class="input-group mb-3" >
+  			  <select style="width:540px;height:40px" id="discipline" name="discipline">
+  			  	<option value="" disabled selected>Choisir discipline ...</option>
+		  	  	<?php
+						include_once 'index.php';
+						$query = "SELECT * FROM discipline;";
+						$stm = $dbh->prepare($query);
+						$stm->execute();
+						$result = $stm->fetchAll();
+						print "<pre>";
+						print_r($result);
+						print "</pre>";
+						foreach($result as $val){		
+						 	echo '<option value="'.$val['id'].'"> '.$val['discipline_name'].'</option> ';
+						}
+				?>
+			  </select>
+		</div>
 		<div class = "wrapper">
   		<button style="margin-top: 20px;margin-left: 170" type="submit" class="btn btn-primary" class ="center">Creer l'installation</button>
 	</div>
