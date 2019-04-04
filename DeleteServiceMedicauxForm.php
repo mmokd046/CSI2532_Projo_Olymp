@@ -20,18 +20,18 @@
     margin: auto;">
 
 <div class="container">
-  <h2>Listes des residences</h2>
+  <h2>Listes des services medicaux</h2>
   <ul class="list-group">
 	  	<?php
 			include_once 'index.php';
 			$query = "SELECT * FROM 
-			service_medicaux4;";
+			service_medicaux;";
 			$stm = $dbh->prepare($query);
 			$stm->execute();
 			$result = $stm->fetchAll();
 			foreach($result as $val){
 				echo '<form action="DeleteServiceMedicauxController.php" id="form-id" method="POST">';	
-				echo '<input type="hidden" name="transport_id" value="'.$val['id'].'"/>';
+				echo '<input type="hidden" name="service_medical_id" value="'.$val['id'].'"/>';
 				echo '<div style="float:left">';
 			 	echo '<li class="list-group-item" style = "width:300" class="athlete" value="'.$val['id'].'"> '.$val['nom'].'</li></div> <div style="float: left"><button type="submit" style="height:50">Supprimer service medical</button></div> ';
 			 	echo '</form>';

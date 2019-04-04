@@ -30,7 +30,6 @@
 	 $description = $result[0]['description'];
 	 $addresse = $result[0]['addresse'];
 	 $phone_number = $result[0]['phone_number'];
-	 print_r($result);
     ?>
 		<form action="UpdateServiceMedicauxController.php" method="POST">
 		<input type="hidden" name="service_medicaux_id" value="<?php echo $service_medicaux_id ;?>" />

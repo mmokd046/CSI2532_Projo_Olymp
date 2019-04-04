@@ -20,7 +20,7 @@
     margin: auto;">
 
 <div class="container">
-  <h2>Listes des Athletes</h2>
+  <h2>Listes des services medicaux</h2>
   <ul class="list-group">
 	  	<?php
 			include_once 'index.php';

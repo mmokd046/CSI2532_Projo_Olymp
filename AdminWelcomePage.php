@@ -171,8 +171,8 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddInstallationOlymp.php">Ajouter</a>
-      <a href="#">Modifier</a>
-      <a href="#">Supprimer</a>
+      <a href="InstallationOlympiqueList.php">Modifier</a>
+      <a href="DeleteInstallation.php">Supprimer</a>
     </div>
 </div>
 <div class="dropdown">
