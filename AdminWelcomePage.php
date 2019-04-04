@@ -108,22 +108,39 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddDiscipline.php">Ajouter</a>
-      <a href="DisciplineList.php">Modifier discipline</a>
-      <a href="EpreuveList.php">Modifier epreuve</a>
-      <a href="DeleteDiscipline.php">Supprimer Discipline</a>
-      <a href="DeleteEpreuves.php">Supprimer Epreuves</a>
+      <a href="DisciplineList.php">Modifier</a>
+      <a href="SearchDiscipline.php">Cherchez</a>
+      <a href="DeleteDiscipline.php">Supprimer</a>
     </div>
 </div>
+
+ <div class="dropdown">
+    <button class="dropbtn">Epreuve
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="EpreuveList.php">Modifier</a>
+      <a href="SearchEpreuve.php">Cherchez</a>
+      <a href="DeleteEpreuves.php">Supprimer</a>
+    </div>
+  </div>
+
 <div class="dropdown">
     <button class="dropbtn">Athlètes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
       <a href="AthleteForm.php">Ajouter</a>
+      <a href="SearchAthlete.php">Cherchez</a>
       <a href="UpdateAthlete.php">Modifier</a>
       <a href="DeleteAthlete.php">Supprimer</a>
     </div>
   </div> 
+
+
+
+ 
+
 
 <div class="dropdown">
     <button class="dropbtn">Village
@@ -131,6 +148,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddResidence.php">Ajouter Residence</a>
+      <a href="SearchVillage.php">Cherchez Residence</a>
       <a href="ResidenceList.php">Modifier Information de residence</a>
       <a href="DeleteResidence.php">Supprimer residence</a>
     </div>
@@ -142,6 +160,7 @@ body {
     <div class="dropdown-content">
       <a href="AddServiceTransport.php">Ajouter</a>
       <a href="ServiceTransportList.php">Modifier</a>
+      <a href="SearchTransport.php">Cherchez</a>
       <a href="DeleteServiceTransport.php">Supprimer</a>
     </div>
 </div>
@@ -152,6 +171,7 @@ body {
     <div class="dropdown-content">
       <a href="AddServiceMedicaux.php">Ajouter</a>
       <a href="ServiceMedicauxList.php">Modifier</a>
+      <a href="SearchMedicaux.php">Cherchez</a>
       <a href="DeleteServiceMedicauxForm.php">Supprimer</a>
     </div>
 </div>
@@ -162,6 +182,7 @@ body {
     <div class="dropdown-content">
       <a href="AddEmployee.php">Ajouter</a>
       <a href="EmployeeList.php">Modifier</a>
+      <a href="SearchEmployee.php">Cherchez</a>
       <a href="DeleteEmployee.php">Supprimer</a>
     </div>
 </div>
@@ -172,6 +193,7 @@ body {
     <div class="dropdown-content">
       <a href="AddInstallationOlymp.php">Ajouter</a>
       <a href="InstallationOlympiqueList.php">Modifier</a>
+      <a href="SearchOlymp.php">Cherchez</a>
       <a href="DeleteInstallation.php">Supprimer</a>
     </div>
 </div>
@@ -181,6 +203,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddCountry.php">Ajouter</a>
+      <a href="SearchCountry.php">Cherchez</a>
       <a href="CountryList.php">Modifier</a>
       <a href="DeletePays.php">Supprimer</a>
     </div>
@@ -193,6 +216,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="AddOfficielForm.php">Ajouter</a>
+      <a href="SearchOfficiel.php">Cherchez</a>
       <a href="OfficielList.php">Modifier</a>
       <a href="DeleteOfficiel.php">Supprimer</a>
     </div>
