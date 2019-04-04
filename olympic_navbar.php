@@ -111,13 +111,26 @@ body {
       <a href="#">Chercher une discipline</a>
     </div>
   </div>
+
+
+  <div class="dropdown">
+    <button class="dropbtn">Epreuve
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="EpreuveListExternal.php">Voir les epreuves</a>
+      <a href="SearchEpreuve.php">Cherchez epreuves</a>
+    </div>
+  </div>
+
+
 <div class="dropdown">
     <button class="dropbtn">Athlètes
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
       <a href="AthletesListExternal.php">Voir les Athletes</a>
-      <a href="#">Chercher les athletes</a>
+      <a href="SearchAthlete.php">Chercher les athletes</a>
     </div>
   </div> 
 
@@ -127,7 +140,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="ResidenceListExternal.php">Listes des residence</a>
-      <a href="#">Chercher une residence</a>
+      <a href="SearchVillage.php">Chercher une residence</a>
     </div>
   </div>
 <div class="dropdown">
@@ -136,7 +149,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="#">Liste des services de transport</a>
-      <a href="#">Chercher service de transport</a>
+      <a href="SearchTransport.php">Chercher service de transport</a>
     </div>
 </div>
 <div class="dropdown">
@@ -145,7 +158,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="#">Listes des services medicaux</a>
-      <a href="#">Chercher services medicaux</a>
+      <a href="SearchMedicaux.php">Chercher services medicaux</a>
     </div>
 </div>
 <div class="dropdown">
@@ -154,7 +167,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="EmployeeListExternal.php">Listes des employer</a>
-      <a href="#">Chercher employer</a>
+      <a href="SearchEmployee.php">Chercher employer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -162,8 +175,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des installations olympiques</a>
-      <a href="#">Chercher installation olympiques</a>
+      <a href="SearchOlymp.php">Listes des installations olympiques</a>
+      <a href="SearchOlymp.php">Chercher installation olympiques</a>
     </div>
 </div>
 <div class="dropdown">
@@ -172,7 +185,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="PaysListExternal.php">Listes des pays</a>
-      <a href="#">Chercher pays</a>
+      <a href="SearchCountry.php">Chercher pays</a>
     </div>
 </div>
 <div class="dropdown">
@@ -181,7 +194,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="OfficielListExternal.php">Listes des officiels</a>
-      <a href="#">Chercher officiel</a>
+      <a href="SearchOfficiel.php">Chercher officiel</a>
     </div>
 </div>
 <div class="dropdown">

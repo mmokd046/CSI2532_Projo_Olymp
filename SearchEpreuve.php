@@ -18,15 +18,15 @@
     width: 500px;
     height: 400px;
     margin: auto;">
-		<form action="FoundVillage.php" id ="HomePageForm" method="POST">
+		<form action="FoundEpreuve.php" id ="HomePageForm" method="POST">
 			<div class="input-group mb-3">
-			  <input type="text" class="form-control" placeholder="Entrer le nom du residence" name="addresse" aria-label="Username" aria-describedby="basic-addon1" id="country">
+			  <input type="text" class="form-control" placeholder="Entrer le nom de l'epreuve" name="epreuve" aria-label="Username" aria-describedby="basic-addon1" id="country">
 			</div>
 		  <div class="alert alert-danger" role="alert" id="emailDiv" hidden>
   				<strong>Oh snap!</strong> Change a few things up and try submitting again.
 		</div>
 	<div class = "wrapper">
-  		<button style="margin-top: 20px;margin-left: 170" type="submit" class="btn btn-primary" class ="center">Cherchez residence</button>
+  		<button style="margin-top: 20px;margin-left: 170" type="submit" class="btn btn-primary" class ="center">Cherchez epreuve</button>
 	</div>
 		</form>		
 	</div>

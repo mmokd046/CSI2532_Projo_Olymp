@@ -18,7 +18,7 @@
     width: 500px;
     height: 400px;
     margin: auto;">
-		<form action="AddCountryController.php" id ="HomePageForm" method="POST">
+		<form action="FoundCountry.php" id ="HomePageForm" method="POST">
 			<div class="input-group mb-3">
 			  <input type="text" class="form-control" placeholder="Entrer le nom du pays" name="country" aria-label="Username" aria-describedby="basic-addon1" id="country">
 			</div>
