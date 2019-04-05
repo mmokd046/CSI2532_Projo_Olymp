@@ -21,7 +21,7 @@
     include_once 'index.php'; 
 	$transport = $_POST['transport'];
 	$countryQuery = "SELECT * FROM service_transport
-						WHERE nom_service LIKE '%$transport%';";
+						WHERE nom_service LIKE '$transport%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

@@ -21,7 +21,7 @@
     include_once 'index.php'; 
 	$pays_name = $_POST['country'];
 	 $countryQuery = "SELECT * FROM pays
-						WHERE nom_pays LIKE '%$pays_name%';";
+						WHERE nom_pays LIKE '$pays_name%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

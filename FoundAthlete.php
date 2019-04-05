@@ -22,7 +22,7 @@
 	$ath = $_POST['ath'];
 	$countryQuery = "SELECT * FROM
 					personne P, athletes A
-					WHERE P.id = A.athlete_id AND  prenom LIKE '%$ath%';";
+					WHERE P.id = A.athlete_id AND  prenom LIKE '$ath%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

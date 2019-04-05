@@ -22,7 +22,7 @@
 	$officiel = $_POST['officiel'];
 	$countryQuery = "SELECT * FROM 
 					personne P, officiel O
-					WHERE P.id = O.officiel_id AND  prenom LIKE '%$officiel%';";
+					WHERE P.id = O.officiel_id AND  prenom LIKE '$officiel%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

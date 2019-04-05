@@ -22,7 +22,7 @@
 	$emp = $_POST['emp'];
 	$countryQuery = "SELECT * FROM 
 					personne P, employee E
-					WHERE P.id = E.employer_id AND  prenom LIKE '%$emp%';";
+					WHERE P.id = E.employer_id AND  prenom LIKE '$emp%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

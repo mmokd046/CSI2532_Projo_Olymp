@@ -21,7 +21,7 @@
     include_once 'index.php'; 
 	$addresse = $_POST['addresse'];
 	 $countryQuery = "SELECT * FROM residence
-						WHERE addresse LIKE '%$addresse%';";
+						WHERE addresse LIKE '$addresse%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

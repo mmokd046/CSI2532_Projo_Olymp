@@ -21,7 +21,7 @@
     include_once 'index.php'; 
 	$olymp = $_POST['olymp'];
 	$countryQuery = "SELECT * FROM installation_olympiques
-						WHERE nom LIKE '%$olymp%';";
+						WHERE nom LIKE '$olymp%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

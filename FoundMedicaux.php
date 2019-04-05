@@ -21,7 +21,7 @@
     include_once 'index.php'; 
 	$medicaux = $_POST['medicaux'];
 	$countryQuery = "SELECT * FROM service_medicaux
-						WHERE nom LIKE '%$medicaux%';";
+						WHERE nom LIKE '$medicaux%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();

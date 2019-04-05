@@ -21,7 +21,7 @@
     include_once 'index.php'; 
 	$discipline = $_POST['discipline'];
 	$countryQuery = "SELECT * FROM discipline
-						WHERE discipline_name LIKE '%$discipline%';";
+						WHERE discipline_name LIKE '$discipline%';";
 	 $stm = $dbh->prepare($countryQuery);
 	 $stm->execute();
 	 $result = $stm->fetchAll();
