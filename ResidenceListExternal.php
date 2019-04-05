@@ -43,7 +43,7 @@
     margin: auto;">
 
   <div class="container">
-      <h2>Listes des disciplines</h2>
+      <h2>Listes des residences</h2>
       <?php
       include_once 'index.php';
       $query = "SELECT * FROM 
@@ -54,11 +54,36 @@
       foreach($result as $val){
         echo '<button class="accordion"> '.$val['addresse'].'</button>';
         echo '<div class="panel">';
-        
-        echo '<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> ';
+        echo '<p> <strong> Nom de la residence : </strong>'.$val['addresse'].'</p>';
+        $residence_id = intval($val['id']);
+        $HabitantQuery =  "SELECT * FROM 
+                            reside  R , personne P
+                            WHERE R.personne_id = P.id AND R.addresse_id= '$residence_id';";
+        $stm = $dbh->prepare($HabitantQuery);
+        $stm->execute();
+        $resulHabitant = $stm->fetchAll();
+        echo '<p> <strong>Listes des habitants</strong></p>';
+        echo '<ul>';
+
+        foreach($resulHabitant  as $habitant){
+           echo '<li>'.$habitant['prenom'].' '.$habitant['last_name'].'</li>';
+        }
+        echo '</ul>';
+        $transportQuery =  "SELECT * FROM 
+                            service_transport S , itneraire I
+                            WHERE I.transport_id = S.id AND I.point_depart = '$residence_id';";
+        $stm = $dbh->prepare($transportQuery);
+        $stm->execute();
+        $resultTransport = $stm->fetchAll();
+        echo '<p> <strong> Listes des services de Transport Passant par la residence </strong></p>';
+        echo '<ul>';
+        foreach($resultTransport as $transport){
+           echo '<li>'.$transport['nom_service'].'</li>';
+        }
+        echo '</ul>';
+        echo'</div>';
       }
-     ?>
-   </div>
+      ?>
+</div>
 </div>  
 </body>

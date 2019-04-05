@@ -1,7 +1,4 @@
-  
-
-
-<head>
+  <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script type='text/javascript' src="DisciplineExternal.js"></script>
@@ -43,44 +40,36 @@
     margin: auto;">
 
   <div class="container">
-      <h2>Listes des employer</h2>
+      <h2>Listes des disciplines</h2>
       <?php
       include_once 'index.php';
       $query = "SELECT * FROM 
-      personne P, employee E 
-      WHERE P.id = E.employer_id ;";
+      service_transport ;";
       $stm = $dbh->prepare($query);
       $stm->execute();
       $result = $stm->fetchAll();
       foreach($result as $val){
-        echo '<button class="accordion"> '.$val['prenom'].'</button>';
+        echo '<button class="accordion"> '.$val['nom_service'].'</button>';
         echo '<div class="panel">';
-        echo '<p> <strong> Nom de employer : </strong>'.$val['prenom'].' '.$val['last_name'].'</p>';
-        echo '<p> <strong> Numero de telephone: </strong>'.$val['phone_number'].'</p>';
-        $employer_id = intval($val['id']);
+        echo '<p> <strong> Nom de officiel: </strong>'.$val['nom_service'].'</p>';
+        $transport_id = intval($val['id']);
         $residenceQuery =  "SELECT * FROM 
-                          reside , residence R
-                          WHERE reside.personne_id = '$employer_id' AND reside.addresse_id = R.id;";
+                          itneraire I , residence R
+                          WHERE I.transport_id = '$transport_id' AND R.id = I.point_depart ;";
         $stm = $dbh->prepare($residenceQuery);
         $stm->execute();
         $resultResidence = $stm->fetchAll();
-        echo '<p> <strong> Residence : </strong>'.$resultResidence[0]['addresse'].'</p>';
-                $discipline_id = intval($val['id']);
-        $epreuvesQuery =  "SELECT * FROM 
-                        epreuve E, appartient A 
-                        WHERE A.discipline_id = '$discipline_id' AND A.epreuves_id = E.id;";
-        $stm = $dbh->prepare($epreuvesQuery);
+        $installationQuery =  "SELECT * FROM 
+                          itneraire I , installation_olympiques R
+                          WHERE I.transport_id = '$transport_id' AND R.id = I.point_arriver ;";
+        $stm = $dbh->prepare($installationQuery);
         $stm->execute();
-        $resultEpreuves = $stm->fetchAll();
-        echo'<p> <strong> Listes des epreuves </strong> </p>';
-        echo '<ul>';
-        foreach($resultEpreuves as $epreuves){
-          echo '<li>'.$epreuves['epreuve_name'].'</li>';
-        }
-        echo '</ul>';
-        echo'</div>';
+        $resultInstallation = $stm->fetchAll();
+        echo '<p> <strong> Point de depart </strong>'.$resultResidence[0]['addresse'].'</p>';
+        echo '<p> <strong> Point de arriver </strong>'.$resultInstallation [0]['nom'].'</p>';
+        echo '</div> ';
       }
      ?>
-   </div>
+  </div>
 </div>  
 </body>

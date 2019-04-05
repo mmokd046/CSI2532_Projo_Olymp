@@ -43,7 +43,7 @@
     margin: auto;">
 
   <div class="container">
-      <h2>Listes des disciplines</h2>
+      <h2>Listes des pays</h2>
       <?php
       include_once 'index.php';
       $query = "SELECT * FROM pays;";
@@ -53,9 +53,21 @@
       foreach($result as $val){
         echo '<button class="accordion"> '.$val['nom_pays'].'</button>';
         echo '<div class="panel">';
-        
-        echo '<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> ';
+        echo '<p> <strong> Nom de la discipline : </strong>'.$val['nom_pays'].'</p>';
+        $pays_id = $val['id'];
+        $paysQuery =  "SELECT * FROM 
+                          personne P, represent R 
+                          WHERE P.id = R.athlete_id AND R.country_id = $pays_id ;";
+        $stm = $dbh->prepare($paysQuery);
+        $stm->execute();
+        $resultPays = $stm->fetchAll();
+        echo'<p> <strong> Listes des athletes </strong> </p>';
+        echo '<ul>';
+        foreach($resultPays as $athlete){
+          echo '<li>'.$athlete['prenom'].' '.$athlete['last_name'].'</li>';
+        }
+        echo '</ul>';
+        echo '</div> ';
       }
      ?>
    </div>

@@ -54,9 +54,21 @@
       foreach($result as $val){
         echo '<button class="accordion"> '.$val['discipline_name'].'</button>';
         echo '<div class="panel">';
-        
-        echo '<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> ';
+        echo '<p> <strong> Nom de la discipline : </strong>'.$val['discipline_name'].'</p>';
+        $discipline_id = intval($val['id']);
+        $epreuvesQuery =  "SELECT * FROM 
+                        epreuve E, appartient A 
+                        WHERE A.discipline_id = '$discipline_id' AND A.epreuves_id = E.id;";
+      $stm = $dbh->prepare($epreuvesQuery);
+      $stm->execute();
+      $resultEpreuves = $stm->fetchAll();
+        echo'<p> <strong> Listes des epreuves </strong> </p>';
+        echo '<ul>';
+        foreach($resultEpreuves as $epreuves){
+          echo '<li>'.$epreuves['epreuve_name'].'</li>';
+        }
+        echo '</ul>';
+        echo'</div>';
       }
      ?>
    </div>

@@ -1,6 +1,3 @@
-  
-
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -47,31 +44,27 @@
       <?php
       include_once 'index.php';
       $query = "SELECT * FROM 
-      personne P, officiel O 
-      WHERE P.id = O.officiel_id ;";
+      service_medicaux ;";
       $stm = $dbh->prepare($query);
       $stm->execute();
       $result = $stm->fetchAll();
       foreach($result as $val){
-        echo '<button class="accordion"> '.$val['prenom'].'</button>';
+        echo '<button class="accordion"> '.$val['nom'].'</button>';
         echo '<div class="panel">';
-        echo '<p> <strong> Nom de officiel: </strong>'.$val['prenom'].' '.$val['last_name'].'</p>';
-        $superviseur_id = intval($val['id']);
-        $superviseQuery =  "SELECT * FROM 
-                            supervise S , personne P
-                            WHERE S.athlete_id = P.id AND S.superviseur_id = '$superviseur_id';";
-        $stm = $dbh->prepare($superviseQuery);
+        echo '<p> <strong> Description du service: </strong>'.$val['description'].'</p>';
+        echo '<p> <strong> Addresse: </strong>'.$val['addresse'].'</p>';
+        echo '<p> <strong> Numero de telephone: </strong>'.$val['phone_number'].'</p>';
+        $service_id = intval($val['id']);
+        $disciplineQuery =  "SELECT * FROM 
+                          take_care T , discipline D
+                          WHERE service_medical_id = '$service_id' AND D.id = T.discipline_id ;";
+        $stm = $dbh->prepare($disciplineQuery);
         $stm->execute();
-        $resultSupervise = $stm->fetchAll();
-        echo '<p> <strong> Listes des athletes superviser </strong></p>';
-        echo '<ul>';
-        foreach($resultSupervise as $superviseur){
-           echo '<li>'.$superviseur['prenom'].' '.$superviseur['last_name'].'</li>';
-        }
-        echo '</ul>';
+        $resultDiscipline = $stm->fetchAll();
+        echo '<p> <strong> Discipline relier  </strong>'.$resultDiscipline [0]['discipline_name'].'</p>';
         echo '</div> ';
       }
      ?>
-   </div>
+  </div>
 </div>  
 </body>

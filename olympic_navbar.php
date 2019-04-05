@@ -139,8 +139,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="ResidenceListExternal.php">Listes des residence</a>
       <a href="SearchVillage.php">Chercher une residence</a>
+      <a href="ResidenceListExternal.php">Voir Residences</a>
     </div>
   </div>
 <div class="dropdown">
@@ -148,8 +148,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Liste des services de transport</a>
       <a href="SearchTransport.php">Chercher service de transport</a>
+      <a href="ServiceTransportListExternal.php">Voir les transport</a>
     </div>
 </div>
 <div class="dropdown">
@@ -157,8 +157,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Listes des services medicaux</a>
       <a href="SearchMedicaux.php">Chercher services medicaux</a>
+      <a href="ServiceMedicauxListExternal.php">Voir les services medicaux</a>
     </div>
 </div>
 <div class="dropdown">
@@ -166,8 +166,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="EmployeeListExternal.php">Listes des employer</a>
       <a href="SearchEmployee.php">Chercher employer</a>
+      <a href="EmployeeListExternal.php">Voir employer</a>
     </div>
 </div>
 <div class="dropdown">
@@ -175,8 +175,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="SearchOlymp.php">Listes des installations olympiques</a>
       <a href="SearchOlymp.php">Chercher installation olympiques</a>
+      <a href="InstallationOlympiquesListExternal.php">Voir les installations olympiques</a>
     </div>
 </div>
 <div class="dropdown">
@@ -184,8 +184,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="PaysListExternal.php">Listes des pays</a>
       <a href="SearchCountry.php">Chercher pays</a>
+      <a href="PaysListExternal.php">Voir les pays</a>
     </div>
 </div>
 <div class="dropdown">
@@ -193,8 +193,8 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="OfficielListExternal.php">Listes des officiels</a>
       <a href="SearchOfficiel.php">Chercher officiel</a>
+      <a href="OfficielListExternal.php">Voir les officiels</a>
     </div>
 </div>
 <div class="dropdown">

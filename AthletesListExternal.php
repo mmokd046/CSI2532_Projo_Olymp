@@ -43,7 +43,7 @@
     margin: auto;">
 
   <div class="container">
-      <h2>Listes des disciplines</h2>
+      <h2>Listes des athletes</h2>
       <?php
       include_once 'index.php';
       $query = "SELECT * FROM 
@@ -55,9 +55,49 @@
       foreach($result as $val){
         echo '<button class="accordion"> '.$val['prenom'].'</button>';
         echo '<div class="panel">';
-        
-        echo '<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> ';
+        echo '<p> <strong> Nom de athletes : </strong>'.$val['prenom'].' '.$val['last_name'].'</p>';
+        $personne_id = intval($val['id']);
+        $paysQuery =  "SELECT * FROM 
+                          pays P, represent R 
+                          WHERE R.athlete_id = '$personne_id' AND P.id = R.country_id ;";
+        $stm = $dbh->prepare($paysQuery);
+        $stm->execute();
+        $resultPays = $stm->fetchAll();
+        echo'<p> <strong> Pays : </strong> '.$resultPays[0]['nom_pays'].' </p>';
+        $epreuveQuery =  "SELECT * FROM 
+                          participe P, epreuve E
+                          WHERE P.athlete_id = '$personne_id' AND E.id = P.epreuves_id ;";
+        $stm = $dbh->prepare($epreuveQuery);
+        $stm->execute();
+        $resultEpreuves = $stm->fetchAll();
+        $residenceQuery =  "SELECT * FROM 
+                          reside , residence R
+                          WHERE reside.personne_id = '$personne_id' AND reside.addresse_id = R.id;";
+        $stm = $dbh->prepare($residenceQuery);
+        $stm->execute();
+        $resultResidence = $stm->fetchAll();
+        echo '<p> <strong> Residence : </strong>'.$resultResidence[0]['addresse'].'</p>';
+        echo '<p> <strong>Listes des epreuves auxquels athletes participe </strong></p>';
+        echo '<ul>';
+        foreach($resultEpreuves as $epreuves){
+           echo '<li>'.$epreuves['epreuve_name'].'</li>';
+        }
+        echo '</ul>';
+         $resultEpreuves = $stm->fetchAll();
+        $superviseQuery =  "SELECT * FROM 
+                            supervise S , personne P
+                            WHERE S.athlete_id = '$personne_id' AND S.superviseur_id = P.id;";
+        $stm = $dbh->prepare($superviseQuery);
+        $stm->execute();
+        $resultSupervise = $stm->fetchAll();
+        echo '<p> <strong> Listes des superviseurs </strong></p>';
+        echo '<ul>';
+        foreach($resultSupervise as $superviseur){
+           echo '<li>'.$superviseur['prenom'].' '.$superviseur['last_name'].'</li>';
+        }
+        echo '</ul>';
+
+        echo'</div>';
       }
      ?>
    </div>
