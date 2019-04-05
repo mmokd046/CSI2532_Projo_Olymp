@@ -27,7 +27,7 @@
 	 $result = $stm->fetchAll();
 	 echo '<h2>Listes des addresse</h2>';
 	 if (sizeof($result) == 0) {
-	 	echo '<p> Aucun addresse trouver </p>';
+	 	 echo '<li class="list-group-item">Aucune residence trouver</li>';
 	 } else {
 	     echo '<ul class="list-group">';
 		 foreach($result as $val){

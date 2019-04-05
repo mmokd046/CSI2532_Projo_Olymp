@@ -27,7 +27,7 @@
 	 $result = $stm->fetchAll();
 	 echo '<h2>Listes des pays</h2>';
 	 if (sizeof($result) == 0) {
-	 	echo '<p> Aucun pays trouver </p>';
+	 	echo '<li class="list-group-item">Aucun pays trouver</li>';
 	 } else {
 	     echo '<ul class="list-group">';
 		 foreach($result as $val){

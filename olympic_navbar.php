@@ -108,7 +108,7 @@ body {
     </button>
     <div class="dropdown-content">
       <a href="DisciplineListExternal.php">Voir les disciplines</a>
-      <a href="#">Chercher une discipline</a>
+      <a href="SearchDiscipline.php">Chercher une discipline</a>
     </div>
   </div>
 
@@ -118,7 +118,6 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="EpreuveListExternal.php">Voir les epreuves</a>
       <a href="SearchEpreuve.php">Cherchez epreuves</a>
     </div>
   </div>

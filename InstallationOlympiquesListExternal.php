@@ -51,10 +51,10 @@
       foreach($result as $val){
         echo '<button class="accordion"> '.$val['nom'].'</button>';
         echo '<div class="panel">';
-        echo '<p> <strong> Description de installation: </strong>'.$val['description'].'</p>';
-        echo '<p> <strong> capaciter de installation: </strong>'.$val['capacity'].'</p>';
-        echo '<p> <strong> Usage de installation: </strong>'.$val['installation_usage'].'</p>';
-        echo '<p> <strong> addresse: </strong>'.$val['addresse'].'</p>';
+        echo '<p> <strong> Description de installation : </strong>'.$val['description'].'</p>';
+        echo '<p> <strong> capaciter de installation : </strong>'.$val['capacity'].'</p>';
+        echo '<p> <strong> Usage de installation : </strong>'.$val['installation_usage'].'</p>';
+        echo '<p> <strong> addresse : </strong>'.$val['addresse'].'</p>';
         $service_id = intval($val['id']);
         $disciplineQuery =  "SELECT * FROM 
                           take_place T , discipline D
@@ -68,8 +68,8 @@
         $stm = $dbh->prepare($transportQuery );
         $stm->execute();
         $resultTransport = $stm->fetchAll();
-        echo '<p> <strong> Discipline qui se deroule a installation  </strong>'.$resultDiscipline [0]['discipline_name'].'</p>';
-        echo '<p> <strong> Transport passant par installation olympiques </strong>'.$resultTransport  [0]['nom_service'].'</p>';
+        echo '<p> <strong> Discipline qui se deroule a installation : </strong>'.$resultDiscipline [0]['discipline_name'].'</p>';
+        echo '<p> <strong> Transport passant par installation olympiques : </strong>'.$resultTransport  [0]['nom_service'].'</p>';
         echo '</div> ';
       }
      ?>

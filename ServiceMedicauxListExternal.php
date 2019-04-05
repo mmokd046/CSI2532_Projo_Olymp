@@ -51,9 +51,9 @@
       foreach($result as $val){
         echo '<button class="accordion"> '.$val['nom'].'</button>';
         echo '<div class="panel">';
-        echo '<p> <strong> Description du service: </strong>'.$val['description'].'</p>';
-        echo '<p> <strong> Addresse: </strong>'.$val['addresse'].'</p>';
-        echo '<p> <strong> Numero de telephone: </strong>'.$val['phone_number'].'</p>';
+        echo '<p> <strong> Description du service : </strong>'.$val['description'].'</p>';
+        echo '<p> <strong> Addresse : </strong>'.$val['addresse'].'</p>';
+        echo '<p> <strong> Numero de telephone : </strong>'.$val['phone_number'].'</p>';
         $service_id = intval($val['id']);
         $disciplineQuery =  "SELECT * FROM 
                           take_care T , discipline D

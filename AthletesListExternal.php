@@ -90,13 +90,16 @@
         $stm = $dbh->prepare($superviseQuery);
         $stm->execute();
         $resultSupervise = $stm->fetchAll();
-        echo '<p> <strong> Listes des superviseurs </strong></p>';
+        if (sizeof($resultSupervise) == 0) {
+          echo '<p> L\'Athletes a aucun superviseur pour le moment </p>';
+        } else {
+                  echo '<p> <strong> Listes des superviseurs </strong></p>';
         echo '<ul>';
         foreach($resultSupervise as $superviseur){
            echo '<li>'.$superviseur['prenom'].' '.$superviseur['last_name'].'</li>';
         }
         echo '</ul>';
-
+        }
         echo'</div>';
       }
      ?>

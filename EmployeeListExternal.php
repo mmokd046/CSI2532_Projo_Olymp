@@ -56,7 +56,7 @@
         echo '<button class="accordion"> '.$val['prenom'].'</button>';
         echo '<div class="panel">';
         echo '<p> <strong> Nom de employer : </strong>'.$val['prenom'].' '.$val['last_name'].'</p>';
-        echo '<p> <strong> Numero de telephone: </strong>'.$val['phone_number'].'</p>';
+        echo '<p> <strong> Numero de telephone : </strong>'.$val['phone_number'].'</p>';
         $employer_id = intval($val['id']);
         $residenceQuery =  "SELECT * FROM 
                           reside , residence R
@@ -66,18 +66,6 @@
         $resultResidence = $stm->fetchAll();
         echo '<p> <strong> Residence : </strong>'.$resultResidence[0]['addresse'].'</p>';
                 $discipline_id = intval($val['id']);
-        $epreuvesQuery =  "SELECT * FROM 
-                        epreuve E, appartient A 
-                        WHERE A.discipline_id = '$discipline_id' AND A.epreuves_id = E.id;";
-        $stm = $dbh->prepare($epreuvesQuery);
-        $stm->execute();
-        $resultEpreuves = $stm->fetchAll();
-        echo'<p> <strong> Listes des epreuves </strong> </p>';
-        echo '<ul>';
-        foreach($resultEpreuves as $epreuves){
-          echo '<li>'.$epreuves['epreuve_name'].'</li>';
-        }
-        echo '</ul>';
         echo'</div>';
       }
      ?>

@@ -61,12 +61,16 @@
         $stm = $dbh->prepare($paysQuery);
         $stm->execute();
         $resultPays = $stm->fetchAll();
-        echo'<p> <strong> Listes des athletes </strong> </p>';
-        echo '<ul>';
-        foreach($resultPays as $athlete){
-          echo '<li>'.$athlete['prenom'].' '.$athlete['last_name'].'</li>';
+        if (sizeof($resultPays) == 0){
+          echo '<p> Aucun atheletes represente ce pays </p>';
+        } else {
+          echo'<p> <strong> Listes des athletes </strong> </p>';
+          echo '<ul>';
+          foreach($resultPays as $athlete){
+            echo '<li>'.$athlete['prenom'].' '.$athlete['last_name'].'</li>';
+          }
+          echo '</ul>';
         }
-        echo '</ul>';
         echo '</div> ';
       }
      ?>

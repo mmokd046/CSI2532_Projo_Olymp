@@ -21,6 +21,8 @@
 
 <div class="container">
 
+	<h2> Listes des pays </h2>
+
   <ul class="list-group">
 	  	<?php
 			include_once 'index.php';
